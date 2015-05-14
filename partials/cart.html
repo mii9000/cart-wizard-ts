@@ -1,0 +1,36 @@
+﻿<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th colspan="999" class="header" style="background-color:black;font:bold;color:white">
+                Cart
+            </th>
+        </tr>
+        <tr>
+            <th class="col-sm-3">Item</th>
+            <th class="col-sm-3">Quantity</th>
+            <th class="col-sm-3">Price</th>
+            <th class="col-sm-3">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{vm.GetSelectedProduct().Name}}</td>
+            <td>{{vm.GetSelectedProduct().ProductQuantity}}</td>
+            <td>{{vm.GetSelectedProduct().ProductPrice}} {{vm.GetSelectedProduct().CurrencySymbol}} / {{vm.GetSelectedProduct().PriceTimePeriod}}</td>
+            <td>{{vm.GetSelectedProduct().ProductPrice * vm.GetSelectedProduct().ProductQuantity | number:2}}&nbsp;{{vm.GetSelectedProduct().CurrencySymbol}} &nbsp;/&nbsp;{{vm.GetSelectedProduct().PriceTimePeriod}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="3" class="text-right">Total:</th>
+            <td>{{vm.GetSelectedProduct().ProductPrice * vm.GetSelectedProduct().ProductQuantity | number:2}}&nbsp;{{vm.GetSelectedProduct().CurrencySymbol}}</td>
+        </tr>
+    </tfoot>
+</table>
+<div class="text-center">
+    <a ui-sref="login" class="btn btn-lg btn-primary " id="btnCheckout" data-nexttab="2">
+        <span class="glyphicon glyphicon-shopping-cart">
+        </span>
+        Checkout
+    </a>
+</div>
