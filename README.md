@@ -1,2 +1,2 @@
 # cart-wizard-ts
-Cart wizard app with Angularjs and TypeScript
+Previous (cart wizard)[https://github.com/Ibrahim-Islam/cart-wizard] app made with angularjs now refactored with TypeScript for learning purposes.
